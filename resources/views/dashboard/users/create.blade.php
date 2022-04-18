@@ -14,6 +14,7 @@
             <div class="col-lg-12">
                 <h4><i class="fa fa-angle-right"></i> Basic Validations</h4>
                 <div class="form-panel">
+                    <x-alert type="error" :message="Success"></x-alert>
                     <form role="form" class="form-horizontal style-form">
 
                         <div class="form-group @error('email') has-error @enderror">

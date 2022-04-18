@@ -12,7 +12,7 @@
 
 	$.fn.dcAccordion = function(options) {
 
-		//set default options 
+		//set default options
 		var defaults = {
 			classParent	 : 'dcjq-parent',
 			classActive	 : 'active',
@@ -78,7 +78,7 @@
 				}
 
 			} else {
-			
+
 				$('li a',obj).click(function(e){
 
 					$activeLi = $(this).parent('li');
@@ -104,7 +104,7 @@
 						$(this).siblings('ul').slideToggle(defaults.speed);
 						$('> a',$activeLi).addClass(defaults.classActive);
 					}
-					
+
 //					// Write cookie if save state is on
 //					if(defaults.saveState == true){
 //						createCookie(defaults.cookie, obj);
@@ -136,7 +136,7 @@
 					});
 				}
 			}
-			
+
 			function linkOver(){
 
 			$activeLi = $(this).parent('li');
@@ -200,7 +200,7 @@
 //			if(cookieVal != null){
 //				// create array from cookie string
 //				var activeArray = cookieVal.split(',');
-//				$.each(activeArray, function(index,value){
+//				$.each(activeArray, function(index.vue,value){
 //					var $cookieLi = $('li:eq('+value+')',obj);
 //					$('> a',$cookieLi).addClass(defaults.classActive);
 //					var $parentsLi = $cookieLi.parents('li');
@@ -212,10 +212,10 @@
 		// Write cookie
 //		function createCookie(cookieId, obj){
 //			var activeIndex = [];
-//			// Create array of active items index value
+//			// Create array of active items index.vue value
 //			$('li a.'+defaults.classActive,obj).each(function(i){
 //				var $arrayItem = $(this).parent('li');
-//				var itemIndex = $('li',obj).index($arrayItem);
+//				var itemIndex = $('li',obj).index.vue($arrayItem);
 //					activeIndex.push(itemIndex);
 //				});
 //			// Store in cookie

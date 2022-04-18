@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+
+Route::get('api/users', [\App\Http\Controllers\Api\V1\UsersController::class, 'index'])->name('api.users.index');
+//Route::get('api/users', 'Api\V1\UsersController@index.vue');
+Route::post('api/messages/{user_id?}', 'Api\V1\MessagesController@index.vue')->name('api.messages.index');
+Route::post('api/messages/send', 'Api\V1\MessagesController@store');

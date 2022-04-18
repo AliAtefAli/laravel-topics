@@ -62,7 +62,7 @@
 
         processActions: {
 
-            // Loads the video file given via data.files and data.index
+            // Loads the video file given via data.files and data.index.vue
             // as video element if the browser supports playing it.
             // Accepts the options fileTypes (regular expression)
             // and maxFileSize (integer) to limit the files to load:

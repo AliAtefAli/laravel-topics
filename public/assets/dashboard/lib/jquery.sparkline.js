@@ -367,9 +367,9 @@
             'font: 10px arial, san serif;' +
             'text-align: left;' +
             'white-space: nowrap;' +
-            
+
             'border: 1px solid white;' +
-            'z-index: 10000;' +
+            'z-index.vue: 10000;' +
             '}' +
             '.jqsfield { ' +
             'color: white;' +

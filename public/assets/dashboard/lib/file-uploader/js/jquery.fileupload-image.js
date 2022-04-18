@@ -141,7 +141,7 @@
 
         processActions: {
 
-            // Loads the image given via data.files and data.index
+            // Loads the image given via data.files and data.index.vue
             // as img element, if the browser supports the File API.
             // Accepts the options fileTypes (regular expression)
             // and maxFileSize (integer) to limit the files to load:
@@ -214,7 +214,7 @@
             },
 
             // Saves the processed image given as data.canvas
-            // inplace at data.index of data.files:
+            // inplace at data.index.vue of data.files:
             saveImage: function (data, options) {
                 if (!data.canvas || options.disabled) {
                     return data;

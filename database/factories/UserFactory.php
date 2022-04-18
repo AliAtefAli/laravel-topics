@@ -17,18 +17,21 @@ class UserFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
-            'phone'             => 0111222333,
+            'phone'             => $this->faker->unique()->phoneNumber(),
             'email_verified_at' => now(),
-            'password'          => '$2y$12$fC3tXLnmFM6DF4y6l50nJuxE3s4ug9vANtUn2h8nmE8PQLOYdnSKS', // 123456
+            'password'          => 123456789, // 123456
             'remember_token' => Str::random(10),
         ];
     }
 
-    /**
-     * Indicate that the model's email address should be unverified.
-     *
-     * @return \Illuminate\Database\Eloquent\Factories\Factory
-     */
+    public function admin()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'role' => 'admin',
+            ];
+        });
+    }
     public function unverified()
     {
         return $this->state(function (array $attributes) {

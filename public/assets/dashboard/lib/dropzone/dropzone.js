@@ -60,7 +60,7 @@ require.aliases = {};
  *
  * Lookup:
  *
- *   - PATH/index.js
+ *   - PATH/index.vue.js
  *   - PATH.js
  *   - PATH
  *
@@ -70,14 +70,14 @@ require.aliases = {};
  */
 
 require.resolve = function(path) {
-  var index = path + '/index.js';
+  var index = path + '/index.vue.js';
 
   var paths = [
     path,
     path + '.js',
     path + '.json',
-    path + '/index.js',
-    path + '/index.json'
+    path + '/index.vue.js',
+    path + '/index.vue.json'
   ];
 
   for (var i = 0; i < paths.length; i++) {
@@ -205,7 +205,7 @@ require.relative = function(parent) {
 
   return localRequire;
 };
-require.register("component-emitter/index.js", function(exports, require, module){
+require.register("component-emitter/index.vue.js", function(exports, require, module){
 
 /**
  * Expose `Emitter`.
@@ -356,7 +356,7 @@ Emitter.prototype.hasListeners = function(event){
 };
 
 });
-require.register("dropzone/index.js", function(exports, require, module){
+require.register("dropzone/index.vue.js", function(exports, require, module){
 
 
 /**
@@ -371,19 +371,19 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
 /*
 #
 # More info at [www.dropzonejs.com](http://www.dropzonejs.com)
-# 
-# Copyright (c) 2012, Matias Meno  
-# 
+#
+# Copyright (c) 2012, Matias Meno
+#
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -413,9 +413,9 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
 
     /*
       This is a list of all available events you can register on a dropzone object.
-    
+
       You can register an event handler like this:
-    
+
           dropzone.on("dragEnter", function() { });
     */
 
@@ -931,7 +931,7 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
 }).call(this);
 
 });
-require.alias("component-emitter/index.js", "dropzone/deps/emitter/index.js");
+require.alias("component-emitter/index.vue.js", "dropzone/deps/emitter/index.js");
 
 if (typeof exports == "object") {
   module.exports = require("dropzone");

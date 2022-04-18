@@ -72,7 +72,7 @@
 				index = hash || (i + 1),
 				title = ttl || this.o.locations[i].title,
 				el_a = $('<a data-load="' + index + '" id="ullist_a_' + index + '" href="#' + index + '" title="' + title + '"><span>' + (title || ('#' + (i + 1))) + '</span></a>');
-			
+
 			el_a.css(this.o.controls_applycss ? {
 				color: '#666',
 				display: 'block',
@@ -134,7 +134,7 @@
 		/**
 		* Create a new instance
 		* @class Maplace
-		* @constructor  
+		* @constructor
 		*/
 		function Maplace(args) {
 			this.VERSION = '0.1.2';
@@ -256,7 +256,7 @@
 						position: 'relative',
 						overflow: 'hidden'
 					});
-					
+
 					//create the container div into map_div
 					this.canvas_map = $('<div>').addClass('canvas_map').css({
 						width: '100%',
@@ -356,12 +356,12 @@
 						self.current_control.activateCurrent.call(self, index + 1);
 					}
 
-					//update current location index
+					//update current location index.vue
 					self.current_index = index;
 
 					self.o.afterShow(index, point, marker);
 				});
-				
+
 				//extends bounds with this location
 				this.oBounds.extend(latlng);
 
@@ -563,7 +563,7 @@
 				return;
 			}
 
-			//else 
+			//else
 			//controls in map
 			var cntr = $('<div class="on_gmap ' + this.o.controls_type + ' gmap_controls"></div>').css(this.o.controls_applycss ? {
 				margin: '5px'
@@ -739,7 +739,7 @@
 			reload && this.Load();
 		};
 
-		//adds a location at the specific index
+		//adds a location at the specific index.vue
 		Maplace.prototype.AddLocation = function (location, index, reload) {
 			var self = this;
 
@@ -785,7 +785,7 @@
 			for (var i = 0; i < this.ln; i++) {
 				$.extend(this.o.locations[i], this.o.commons);
 				if(this.o.locations[i].html) {
-					this.o.locations[i].html = this.o.locations[i].html.replace('%index', i+1);
+					this.o.locations[i].html = this.o.locations[i].html.replace('%index.vue', i+1);
 					this.o.locations[i].html = this.o.locations[i].html.replace('%title', (this.o.locations[i].title || ''));
 				}
 			}
@@ -800,7 +800,7 @@
 			$.extend(true, this.o, args);
 			args && args.locations && (this.o.locations = args.locations);
 			this._init();
-			
+
 			//reset/init google map objects
 			this.o.visualRefresh === false ? (google.maps.visualRefresh = false) : (google.maps.visualRefresh = true);
 			this.init_map();
@@ -808,7 +808,7 @@
 
 			//add markers
 			this.add_markers_to_objMap();
-			
+
 			//generate controls
 			if ((this.ln > 1 && this.o.generate_controls) || this.o.force_generate_controls)  {
 				this.o.generate_controls = true;
