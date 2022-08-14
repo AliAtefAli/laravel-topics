@@ -1,6 +1,6 @@
 <?php
 
-//use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -9,7 +9,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::resource('users', UserController::class);
+Route::resource('users', UserController::class);
 //Route::get('users', [\App\Http\Controllers\Api\V1\UsersController::class, 'index']);
 Route::get('chat', [\App\Http\Controllers\ChatController::class, 'index'])->middleware('auth');
 Route::get('dashboard', function () {

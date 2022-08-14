@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\CreateUser;
 use App\Http\Requests\StoreUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -23,7 +24,9 @@ class UserController extends Controller
 
     public function store(StoreUserRequest $request)
     {
-        dd($request->all());
+        CreateUser::run($request->validated());
+
+        return redirect(route('users.index'));
     }
 
     public function edit(User $user)

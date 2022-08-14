@@ -5,7 +5,7 @@
 
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> Users </h3>
-        <button class="btn btn-success" style="float: right">Create</button>
+        <a href="{{ route('users.create') }}" class="btn btn-success" style="float: right">Create</a>
         <div class="row">
             <!-- /col-md-12 -->
             <div class="col-md-12 mt">
