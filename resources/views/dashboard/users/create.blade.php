@@ -18,7 +18,7 @@
                         <div class="form-group @error('name') has-error @enderror">
                             <label for="name-input" class="col-lg-2 control-label">Name</label>
                             <div class="col-lg-10">
-                                <input type="text" name="name" placeholder="" id="name-input" class="form-control">
+                                <input type="text" name="name" placeholder="" id="name-input" class="form-control" value="{{ old('name') }}" autofocus>
                                 <p class="@error('name') help-block @enderror ">@error('name') {{ $message }} @enderror</p>
                             </div>
                         </div>
@@ -26,7 +26,7 @@
                         <div class="form-group @error('email') has-error @enderror">
                             <label for="email-input" class="col-lg-2 control-label">Email</label>
                             <div class="col-lg-10">
-                                <input type="text" name="email" placeholder="" id="email-input" class="form-control">
+                                <input type="text" name="email" placeholder="" id="email-input"  class="form-control" value="{{ old('email') }}">
                                 <p class="@error('email') help-block @enderror ">@error('email') {{ $message }} @enderror</p>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         <div class="form-group @error('phone') has-error @enderror">
                             <label for="phone-input" class="col-lg-2 control-label">Phone</label>
                             <div class="col-lg-10">
-                                <input type="text" name="phone" placeholder="" id="phone-input" class="form-control">
+                                <input type="text" name="phone" placeholder="" id="phone-input"  class="form-control" value="{{ old('phone') }}">
                                 <p class="@error('phone') help-block @enderror ">@error('phone') {{ $message }} @enderror</p>
                             </div>
                         </div>

@@ -9,12 +9,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('users', UserController::class);
+Route::resource('users', UserController::class)->middleware(['auth', 'admin']);
 //Route::get('users', [\App\Http\Controllers\Api\V1\UsersController::class, 'index']);
 Route::get('chat', [\App\Http\Controllers\ChatController::class, 'index'])->middleware('auth');
-Route::get('dashboard', function () {
-    return true;
-})->middleware('admin');
+//Route::get('dashboard', function () {
+//    return true;
+//})->middleware('admin');
 
 Route::get('gallery', function () {
     dd(
