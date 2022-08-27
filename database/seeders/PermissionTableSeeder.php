@@ -47,5 +47,6 @@ class PermissionTableSeeder extends Seeder
         }
 
         $role->givePermissionTo(AllPermissions::Permissions);
+        $admin->assignRole($role);
     }
 }
