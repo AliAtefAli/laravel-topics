@@ -5,20 +5,20 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "8.0.*",
+        "php": "8.1.*",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "inertiajs/inertia-laravel": "^0.5.4",
         "intervention/image": "^2.5",
         "laravel/framework": "^9.2.0",
-        "laravel/sanctum": "^2.8",
+        "laravel/sanctum": "^3.0",
         "laravel/telescope": "^4.0",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.0",
         "livewire/livewire": "^2.6",
+        "lorisleiva/laravel-actions": "^2.4",
         "spatie/laravel-permission": "^5.1",
-        "tightenco/ziggy": "^1.0",
-        "lorisleiva/laravel-actions": "^2.4"
+        "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
