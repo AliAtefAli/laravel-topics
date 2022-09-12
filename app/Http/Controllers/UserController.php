@@ -6,10 +6,13 @@ use App\Actions\CreateUser;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
+use App\Traits\Uploadable;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    use Uploadable;
+
     public function index()
     {
         $users = User::all();
@@ -26,11 +29,12 @@ class UserController extends Controller
     public function store(StoreUserRequest $request)
     {
         $data = $request->validated();
+        $image = $this->uploadOne($data['image'], 'users', true);
         if ($request->has('image')){
             $file = $request->file('image');
             $name = date('YmdHi') . '-' . $file->getClientOriginalName();
             $file->move(public_path('assets\uploads\users'), $name);
-            $data['image'] = $name;
+            $data['image'] = $image;
         }
 
         return redirect(route('users.index'));
